@@ -1,0 +1,76 @@
+version: "3.5"
+services:
+    
+  register_service:
+    build: 
+      context: ./registerService
+      dockerfile: Dockerfile
+    container_name: register_service
+    restart: always
+    environment:
+      - HOSTNAME=register_service
+    networks:
+      - service
+      - database
+    volumes:
+      - ./common/:/usr/src/app/common
+
+  write_service:
+    build: 
+      context: ./writeService
+      dockerfile: Dockerfile
+    container_name: write_service
+    restart: always
+    environment:
+      - HOSTNAME=write_service
+    networks:
+      - service
+      - database
+    volumes:
+      - ./common/:/usr/src/app/common
+
+  sync_service1:
+    build: 
+      context: ./syncService
+      dockerfile: Dockerfile
+    container_name: sync_service1
+    restart: always
+    environment:
+      - HOSTNAME=sync_service1
+    networks:
+      - service
+      - database
+    volumes:
+      - ./common/:/usr/src/app/common
+    
+  auth_service1:
+    build: 
+      context: ./authService
+      dockerfile: Dockerfile
+    container_name: auth_service1
+    restart: always
+    environment:
+      - HOSTNAME=auth_service1
+    networks:
+      - service
+      - database
+    volumes:
+      - ./common/:/usr/src/app/common
+
+  nginx_service:
+    build: 
+      context: ./nginxService
+      dockerfile: Dockerfile
+    container_name : nginx_service
+    networks:
+      - service
+      
+networks:
+  service:
+    name: service_nw
+  database:
+    name: database_nw
+
+volumes:
+  common:
+    external: true

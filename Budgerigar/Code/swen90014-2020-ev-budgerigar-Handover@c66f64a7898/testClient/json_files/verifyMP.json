@@ -1,0 +1,14 @@
+{
+  "host": "https://yam1.eastus.cloudapp.azure.com",
+  "isRegister": false,
+  "POST" :  [
+    {
+      "path": "/api/users/verify",
+      "requestPayload": {
+        "username": "",
+        "email": "valid_email_to_receive_uid"
+      },
+      "responseStatus" : "200 OK"
+    }
+  ]
+}

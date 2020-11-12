@@ -1,0 +1,1 @@
+export const query = `DELETE FROM users;`

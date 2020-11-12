@@ -1,0 +1,23 @@
+*** Test for a new user
+./runTests.sh ->  
+    Creates new username and key-pair and sends subsequent requests as this user
+        Keys -> json_files/key.json. 
+        Username -> username.txt.
+    1. Registration request according to $REGISTRATION_JSON
+    2. Subsequent POST/GET requests according to $TEST_JSON
+
+*** Test for a existing user ( requires successful Registration )
+./existingUser.sh ->  
+    Reads exsting username and keypair files and sends non-registration requests as this user
+    1. POST/GET requests according to $TEST_JSON
+
+*** MP verification ( requires successful Registration )
+./validateMp.sh ->
+     Reads exsting username and keypair files and sends Mp validation followed by UID validation
+     1. POST request according to $EMAIL
+     2. Once email is received, update the path value "json_files/verifyUID.json"
+             "path": "/api/users/verify/{UID}"
+
+- Test results are printed on the Terminal
+- Test logs are generated under $TEST_JSON.LOG files
+

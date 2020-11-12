@@ -1,0 +1,33 @@
+Docker and Docker-compose should be installed on the system. From server/Scripts/
+    ./installDocker-compose.sh
+    ./installDocker.sh
+
+Obtain valid SSL certificates, and update path in server/Scripts/installSSLCerts.sh -> SSL_CERT_DIR=''.
+Then, from server/Scripts/
+
+    sudo ./installServer.sh
+
+The server is divided into 2 levels:	Api-container 
+										service-container + DB
+When the server is started, multiple docker images are built and inter-connected through internal networks.
+To run entire server 
+    - cd server/
+    - runServer.sh  -> starts all services
+    - Scripts/stopServer.sh -> stops all services
+    
+The above commands executes 'docker-compose' inside each of the 'Api-container/' and 'service-container/' folders. All services then start in the background.
+To run these services in the foreground, remove the '-d' flag from line 5 of cleanRunContainer.sh in both of the above folders.
+
+3 API endpoints available : 
+https://machine-ip/register/user
+    Register API    -> Register service                                 -> Database
+    
+https://machine-ip/write/user
+    Write API       -> Sign/Verification Service    -> Write service    -> Database
+    
+https://machine-ip/sync/user
+    Synchronize API -> Sign/Verification Service    -> Sync service     -> Database
+
+For development, an extension to manage PostgreSQL has been added called 'Adminer'. 
+To access PostgreSQL through Adminer -> browser->localhost:8080
+(Login details according to server/serviceContainer/common/.env.docker)

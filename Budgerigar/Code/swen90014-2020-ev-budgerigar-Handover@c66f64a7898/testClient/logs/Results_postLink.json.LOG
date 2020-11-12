@@ -1,0 +1,22 @@
+2020/10/30 14:19:58 Testing the following
+2020/10/30 14:19:58 POST	: https://yam1.eastus.cloudapp.azure.com/api/questions/1/links
+2020/10/30 14:19:58 Sending Payload	: map[link:https://hansard.parliament.vic.gov.au/q1 username:testUser2574]
+2020/10/30 14:19:58 Expecting Status 	:                                   200 OK
+2020/10/30 14:19:58 Sending request...
+2020/10/30 14:19:58 &{POST https://yam1.eastus.cloudapp.azure.com/api/questions/1/links HTTP/1.1 1 1 map[Accept:[accept: 'application/json, text/plain, */*'] Content-Type:[application/json;charset=utf-8] Righttoask-Auth:[fda2d27cb700460a32c431229f39d2251c76786002fdc0e39a7bcb6775564a03a94a53854eea41c8fe78208afa6b67d11cc18be5c26fefb0e2dde5c5ef1f2c69da1a3ee02716f5d2aa7364a5b8749992b23fc185d941caec9b9deb6ceee6c027fbcca6f7d0c189804aaeaee395076dde4212f692a36392b65a86167b684a9ba8793e1dd83b65bfde7b860c579258de211d684bad331eeadc177741e7a2f9b98414b1cd4f01d0d98588a1baf24e2caf718ce78e49ca097dbfa7ae8254c2f63dcb980eebf01e9c9686f8e0bf06e6109c28b482f9d4dbc4a3517e8ec995835d77c352f9e926bf3085181b0db317a59c3fe11eaaacbb558f3e3d49f3e6842c99857] Righttoask-Timestamp:[1604027998] Righttoask-Username:[testUser2574]] {{"link":"https://hansard.parliament.vic.gov.au/q1","username":"testUser2574"}} 0x1254030 77 [] false yam1.eastus.cloudapp.azure.com map[] map[] <nil> map[]   <nil> <nil> <nil> 0xc0000180f0}
+2020/10/30 14:19:59 Response body:
+2020/10/30 14:19:59 {"success":"Link https://hansard.parliament.vic.gov.au/q1 successfully added to question 1","details":{"id":29,"questionID":1,"link":"https://hansard.parliament.vic.gov.au/q1","dateCreated":"2020-10-30T03:19:59.463Z","lastModified":"2020-10-30T03:19:59.463Z"}}
+2020/10/30 14:19:59 Response status	:                                             200 OK
+2020/10/30 14:19:59 https://yam1.eastus.cloudapp.azure.com/api/questions/1/linksTime taken:  1.436796757s
+2020/10/30 14:19:59 ------------------------------------------------------------------------------------------------
+2020/10/30 14:19:59 Testing the following
+2020/10/30 14:19:59 POST	: https://yam1.eastus.cloudapp.azure.com/api/questions/2/links
+2020/10/30 14:19:59 Sending Payload	: map[link:https://hansard.parliament.vic.gov.au/q2 username:testUser2574]
+2020/10/30 14:19:59 Expecting Status 	:                                   200 OK
+2020/10/30 14:19:59 Sending request...
+2020/10/30 14:19:59 &{POST https://yam1.eastus.cloudapp.azure.com/api/questions/2/links HTTP/1.1 1 1 map[Accept:[accept: 'application/json, text/plain, */*'] Content-Type:[application/json;charset=utf-8] Righttoask-Auth:[183119034c5e1cc16185faceb0cdb6dea2cbb2acbdf92ede92e793b4bdbda2788623605cae06e3f91c0bd2f700be88ffdb89bbe4e5547f24ef0808246ea48ffed04ceb1778b7fee83c35e67d18a06bb87973b242c6877aeb76c08fd9bf756a040d80631d64622bc04de428fa9bde4d13b508bb76389d6a2621deb99b9008c73f87d32fccba7ceb06a5d8034c5b5df8981f4b9d8b472ea10c6d25aa80df7e5cbe1aa9703139cb598a0aaf995f1dbf0bc6573dca0965f0acc1988ff86300ca907e011ba89dbf8279409ddadd39d684ea40f2909fdcd00e524c5aba25740dfd78063b4aa0013299908b688b909cdf956aecf84ec6ffec7cbb197d9253b3de8a270a] Righttoask-Timestamp:[1604027998] Righttoask-Username:[testUser2574]] {{"link":"https://hansard.parliament.vic.gov.au/q2","username":"testUser2574"}} 0x1254030 77 [] false yam1.eastus.cloudapp.azure.com map[] map[] <nil> map[]   <nil> <nil> <nil> 0xc0000180f0}
+2020/10/30 14:20:00 Response body:
+2020/10/30 14:20:00 {"success":"Link https://hansard.parliament.vic.gov.au/q2 successfully added to question 2","details":{"id":30,"questionID":2,"link":"https://hansard.parliament.vic.gov.au/q2","dateCreated":"2020-10-30T03:19:59.978Z","lastModified":"2020-10-30T03:19:59.978Z"}}
+2020/10/30 14:20:00 Response status	:                                             200 OK
+2020/10/30 14:20:00 https://yam1.eastus.cloudapp.azure.com/api/questions/2/linksTime taken:  304.771307ms
+2020/10/30 14:20:00 ------------------------------------------------------------------------------------------------

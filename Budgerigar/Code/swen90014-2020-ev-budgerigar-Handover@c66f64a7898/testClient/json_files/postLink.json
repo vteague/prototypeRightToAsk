@@ -1,0 +1,22 @@
+{
+  "host": "https://yam1.eastus.cloudapp.azure.com",
+  "isRegister": false,
+  "POST" : [
+      {
+        "path": "/api/questions/1/links",
+        "requestPayload": {
+          "username": "",
+          "link" : "https://hansard.parliament.vic.gov.au/q1"
+        },
+        "responseStatus" : "200 OK"
+      },
+      {
+        "path": "/api/questions/2/links",
+        "requestPayload": {
+          "username": "",
+          "link" : "https://hansard.parliament.vic.gov.au/q2"
+        },
+        "responseStatus" : "200 OK"
+      }
+    ]
+}

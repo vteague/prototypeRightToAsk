@@ -1,0 +1,22 @@
+2020/10/30 14:19:54 Testing the following
+2020/10/30 14:19:54 POST	: https://yam1.eastus.cloudapp.azure.com/api/questions
+2020/10/30 14:19:54 Sending Payload	: map[message:Will this work? username:testUser2574]
+2020/10/30 14:19:54 Expecting Status 	:                                   200 OK
+2020/10/30 14:19:54 Sending request...
+2020/10/30 14:19:54 &{POST https://yam1.eastus.cloudapp.azure.com/api/questions HTTP/1.1 1 1 map[Accept:[accept: 'application/json, text/plain, */*'] Content-Type:[application/json;charset=utf-8] Righttoask-Auth:[14e3cdee601e6746a3264dcaba189008d7a0fb9999881955507b754e32d865e4befe94c2e419b94c06605bd6decf810e6878e93557975016039dd65e5b0c164ffc6844f5ed53a86acced04be8475243bca5e2dfb6335ac2d1a476a630cfe210625bf9ba349bd339fab8cd585f0c354fe811a2b3624552b9bda0df451ce931ae7341e14aa8659394427febdd2684861c592917e00fde2700a1205eb84b98b98c781a66b18d30093f918ab042bd55d7bca36600f742963d3c371bc09675df814172ca12902a01a3b1eaec66effe045cd57501ed4ffb66d9fbcaddca3fb694f1b50859bb25fc6ab0fc7ff84c0eb76e230318e4bb02fd59846e15e5208f42f19486d] Righttoask-Timestamp:[1604027994] Righttoask-Username:[testUser2574]] {{"message":"Will this work?","username":"testUser2574"}} 0x1254030 55 [] false yam1.eastus.cloudapp.azure.com map[] map[] <nil> map[]   <nil> <nil> <nil> 0xc0000180f0}
+2020/10/30 14:19:56 Response body:
+2020/10/30 14:19:56 {"success":"Question 'Will this ...' successfully posted by user testUser2574","details":{"id":29,"userID":31,"username":null,"message":"Will this work?","upVotes":0,"downVotes":0,"dateCreated":"2020-10-30T03:19:55.520Z","lastModified":"2020-10-30T03:19:55.520Z"}}
+2020/10/30 14:19:56 Response status	:                                             200 OK
+2020/10/30 14:19:56 https://yam1.eastus.cloudapp.azure.com/api/questionsTime taken:  1.51782799s
+2020/10/30 14:19:56 ------------------------------------------------------------------------------------------------
+2020/10/30 14:19:56 Testing the following
+2020/10/30 14:19:56 POST	: https://yam1.eastus.cloudapp.azure.com/api/questions
+2020/10/30 14:19:56 Sending Payload	: map[message:Will this work again? username:testUser2574]
+2020/10/30 14:19:56 Expecting Status 	:                                   200 OK
+2020/10/30 14:19:56 Sending request...
+2020/10/30 14:19:56 &{POST https://yam1.eastus.cloudapp.azure.com/api/questions HTTP/1.1 1 1 map[Accept:[accept: 'application/json, text/plain, */*'] Content-Type:[application/json;charset=utf-8] Righttoask-Auth:[437ac5e1aebfceb2752918638fcf6039b9b7501026d32c1adf5b3c2fb53da8a2ac7cc18a98bd164b59ec7cedfdaaa632eb2ecc55eff1a1975b3a9c71f0ff28fa0a60ae2a7306bd5b441433733b9246ad75a5d5ba2b4e4315776080ab918369a947d9d49865ac7013a2fccdb356f05a7ef9190cc19b0c146a124b90a9d8dfe9575ccfdf63357837f00932572703c22041942d91197bc76f626d380821c3721779fa5170a275d69e18149e1924d213515e3d1c29bd9999485e4bdcf87dafd9607ed75822b42905b651fd8b587e093c67b1a4fdad01370e5b3417a49c9dddbf8b3bffda5d7c05c0957e122aa48a472a7cf0b2f6e57eb5cbb7ea8e467cda1702db52] Righttoask-Timestamp:[1604027994] Righttoask-Username:[testUser2574]] {{"message":"Will this work again?","username":"testUser2574"}} 0x1254030 61 [] false yam1.eastus.cloudapp.azure.com map[] map[] <nil> map[]   <nil> <nil> <nil> 0xc0000180f0}
+2020/10/30 14:19:56 Response body:
+2020/10/30 14:19:56 {"success":"Question 'Will this ...' successfully posted by user testUser2574","details":{"id":30,"userID":31,"username":null,"message":"Will this work again?","upVotes":0,"downVotes":0,"dateCreated":"2020-10-30T03:19:56.187Z","lastModified":"2020-10-30T03:19:56.187Z"}}
+2020/10/30 14:19:56 Response status	:                                             200 OK
+2020/10/30 14:19:56 https://yam1.eastus.cloudapp.azure.com/api/questionsTime taken:  308.214902ms
+2020/10/30 14:19:56 ------------------------------------------------------------------------------------------------

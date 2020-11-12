@@ -1,0 +1,15 @@
+.DS_STORE
+bin/
+
+server/**/db_data/
+server/test
+server/**/*.pem
+server/**/node_modules/
+server/**/package-lock.json
+server/**/logs
+
+client/node_modules/
+client/package-lock.json
+
+coverage/
+client/debug.log

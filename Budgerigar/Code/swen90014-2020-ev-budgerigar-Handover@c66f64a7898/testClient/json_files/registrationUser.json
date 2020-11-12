@@ -1,0 +1,15 @@
+{
+  "host": "https://yam1.eastus.cloudapp.azure.com",
+  "isRegister": true,
+  "POST" :  [
+    {
+      "path": "/api/users",
+      "responseStatus" : "201 Created"
+    },
+    {
+      "path": "/api/users",
+      "USERNAME": "testUser5000",
+      "responseStatus" : "400 Bad Request"
+    }
+  ]
+}

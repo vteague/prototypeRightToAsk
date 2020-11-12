@@ -1,0 +1,47 @@
+{
+  "name": "auth_service",
+  "version": "1.0.0",
+  "description": "microservice to handle authentication of http requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start-docker": "node -r dotenv/config index.js dotenv_config_path=./common/.env.docker",
+    "start-local": "node -r dotenv/config index.js dotenv_config_path=../common/.env.local"
+  },
+  "author": "Sam Webster",
+  "license": "ISC",
+  "dependencies": {
+    "big-integer": "^1.6.48",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "pg": "^8.3.3"
+  },
+  "jest": {
+    "verbose": true,
+    "clearMocks": true,
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/docs/",
+      "<rootDir>/build/"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/docs/",
+      "<rootDir>/build/"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest/setEnvVars.js"
+    ]
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "jest": "^26.4.2"
+  }
+}

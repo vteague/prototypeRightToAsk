@@ -1,0 +1,12 @@
+{
+  "host": "https://yam1.eastus.cloudapp.azure.com",
+  "isRegister": false,
+  "GET" : [
+      {
+        "host": "https://yam1.eastus.cloudapp.azure.com",
+        "path": "/api/sync",
+        "responseStatus" : "200 OK"
+      }
+    ]
+}
+  

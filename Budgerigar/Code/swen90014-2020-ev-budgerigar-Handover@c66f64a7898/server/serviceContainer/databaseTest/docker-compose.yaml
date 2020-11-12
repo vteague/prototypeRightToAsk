@@ -1,0 +1,39 @@
+version: "3.5"
+services:
+
+  db-test:
+    image: postgres:10-alpine
+    ports:
+      - "5432:5432"
+    container_name: db-test
+    # expose:
+    #  - 5432
+    environment:
+      POSTGRES_USER: test-user
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: database-test
+    volumes:
+      - ./server.sql:/docker-entrypoint-initdb.d/server.sql
+      - ./db_data:/var/lib/postgresql/data
+    networks:
+      - database
+  adminer:
+    image: adminer
+    restart: always
+    container_name: adminer-test
+    depends_on: 
+      - db-test
+    ports:
+      - 8080:8080
+    networks:
+      - database
+
+networks:
+  database:
+    name: database_nw
+
+volumes:
+  db_data:
+    external: true
+
+

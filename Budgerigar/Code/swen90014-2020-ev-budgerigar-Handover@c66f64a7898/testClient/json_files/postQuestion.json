@@ -1,0 +1,22 @@
+{
+  "host": "https://yam1.eastus.cloudapp.azure.com",
+  "isRegister": false,
+  "POST" : [
+    {
+      "path": "/api/questions",
+      "requestPayload": {
+        "username": "",
+        "message": "Will this work?"
+      },
+      "responseStatus" : "200 OK"
+    },
+    {
+      "path": "/api/questions",
+      "requestPayload": {
+        "username": "",
+        "message": "Will this work again?"
+      },
+      "responseStatus" : "200 OK"
+    }
+  ]
+}

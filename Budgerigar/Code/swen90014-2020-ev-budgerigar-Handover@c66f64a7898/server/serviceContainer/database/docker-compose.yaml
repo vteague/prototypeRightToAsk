@@ -1,0 +1,27 @@
+version: "3.5"
+services:
+
+  db:
+    image: postgres:10-alpine
+    ports:
+      - "5432:5432"
+    container_name: db
+    environment:
+      POSTGRES_USER:  
+      POSTGRES_PASSWORD: 
+      POSTGRES_DB: 
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+      - ./server.sql:/docker-entrypoint-initdb.d/server.sql
+    networks:
+      - database
+
+networks:
+  database:
+    name: database_nw
+
+volumes:
+  db_data:
+    external: true
+
+

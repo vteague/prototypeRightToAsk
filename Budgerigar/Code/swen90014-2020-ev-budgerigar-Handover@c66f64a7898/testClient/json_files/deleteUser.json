@@ -1,0 +1,13 @@
+{
+  "host": "https://yam1.eastus.cloudapp.azure.com",
+  "isRegister": false,
+  "DELETE" : [
+    {
+      "path": "/api/users",
+      "requestPayload": {
+        "username": ""
+      },
+      "responseStatus" : "200 OK"
+    }
+  ]
+}

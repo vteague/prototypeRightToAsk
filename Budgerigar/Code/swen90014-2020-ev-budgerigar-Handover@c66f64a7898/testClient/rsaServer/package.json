@@ -1,0 +1,20 @@
+{
+  "name": "rsaserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Ishan Goyal",
+  "license": "ISC",
+  "dependencies": {
+    "big-integer": "^1.6.48",
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "ip": "^1.1.5",
+    "react-native-rsa": "0.0.3"
+  }
+}

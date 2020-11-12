@@ -1,0 +1,1 @@
+SELECT * FROM links WHERE question_id=$1;

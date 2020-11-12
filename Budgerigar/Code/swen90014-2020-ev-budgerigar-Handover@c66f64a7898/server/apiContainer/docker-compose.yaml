@@ -1,0 +1,61 @@
+version: "3.5"
+services:
+
+  register_api:
+    build: 
+      context: ./register
+      dockerfile: Dockerfile
+    container_name: register_api
+    restart: always
+    environment:
+      - HOSTNAME=register_api
+    networks:
+      - service
+    volumes:
+      - ./common/:/usr/src/app/common
+
+  post_api:
+    build: 
+      context: ./write
+      dockerfile: Dockerfile
+    container_name: post_api
+    restart: always
+    environment:
+      - HOSTNAME=post_api
+    networks:
+      - service
+    volumes:
+      - ./common/:/usr/src/app/common
+
+  sync_api1:
+    build: 
+      context: ./sync
+      dockerfile: Dockerfile
+    container_name: sync_api1
+    restart: always
+    environment:
+      - HOSTNAME=sync_api1
+    networks:
+      - service
+    volumes:
+      - ./common/:/usr/src/app/common
+
+  nginx_api:
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name : nginx_api
+    environment:
+      - HOSTNAME=nginx_api
+    ports:
+      - "443:443"
+    networks:
+      - service
+
+networks:
+  service:
+    name: service_nw
+
+volumes:
+  common:
+    external: true
